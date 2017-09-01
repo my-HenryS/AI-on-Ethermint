@@ -2,9 +2,9 @@
 
 ### Overview
 
-The project provides a distributed a hand writing recognition serivce running on Ethermint.
+The project provides a distributed hand writing recognition serivce running on Ethermint.
 
-With the client node runs the first few layers of CNN, the service node then continue analyzes the processed data with the rest layers (full connnected layers).
+With the client node processes user's image with the first few layers of CNN, the service node then continue analyzes the processed data with the rest layers (full connnected layers).
 
 It aims at protecting data privacy since service node cannot get access to the original data while the customer cannot obtain the whole analyze model.
 
@@ -18,9 +18,9 @@ The result looks like this. You can trace the service process on the console of 
 
 1. Environment
 
-   OS: Linux / Mac OS / Windows(maybe)
+   OS: **Linux / Mac OS / Windows** (under experiment)
 
-   Docker: The entire project is wrapped in Docker containers.
+   Docker: The entire project is wrapped in **Docker** containers.
 
 2. Deploy
 
