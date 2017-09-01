@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIANJIE-OCR</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body onUnload="myClose()" >
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#">Brand</a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a> </li>
+        <li><a href="#">Link</a> </li>
+        <li><a href="#">Link</a> </li>
+        <li><a href="#">Link</a> </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a> </li>
+        <li><a href="#">Link</a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="jumbotron">
+        <h1 class="text-center">Hand Writing Recognition</h1>
+        <h2 class="text-center">A demo of AI application running on Blockchain</h2>
+        <div class="row">
+          <p class="col-lg-offset-5 col-lg-1"><a class="btn btn-success btn-lg" href="#trial" role="button">Try Now</a></p>
+		</div>
+        <p class="text-center">Protects data privacy and model IP. Provides auditable and trackable intellectual service.</p>
+	  </div>
+	</div>
+  </div>
+</div>
+<hr>
+
+<div id="trial" class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="thumbnail">
+        <div align="center">
+            <canvas id="myCanvas" width="520" height="260" style="border:2px solid #6699cc"></canvas>
+            <div class="control-ops">
+                <style type="text/css">
+                    select{width:100px; height = 10px;}
+                </style>
+              <select id="selWidth">
+                  <option value="3">3#</option>
+                  <option value="5">5#</option>
+                  <option value="7">7#</option>
+                  <option value="9">9#</option>
+                  <option value="11" selected="selected">11#</option>
+                  <option value="13">13#</option>
+              </select>
+              <select id="selColor">
+                  <option value="black">Black</option>
+                  <option value="blue" selected="selected">Blue</option>
+                  <option value="red">Red</option>
+                  <option value="green">Green</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="gray">Grey</option>
+              </select>
+          </div>
+        </div>
+          <h3>Paint board</h3>
+          <p>Please write down any numbers within 0~999999</p>
+          <hr>
+          <p>Submit?
+              <button id="clear" type="button" class="btn btn-warning" onclick="javascript:clearArea();return false;">Clear</button>
+              <button id="submit" type="button" class="btn btn-success" onclick="javascript:save();return false;">Upload</button>
+          </p>
+      </div>
+    </div>
+
+
+    <div class="col-sm-6">
+      <div class="thumbnail">
+        <textarea id="console" disabled="disabled"  style="background-color: black; color: white; width:547px;height:267px;">
+        </textarea>
+        <div class="caption">
+          <h3>Service status on chain</h3>
+		  <p>Data transmission / Waiting for response / Service accomplished</p>
+          <hr>
+          <p>Is the result correct?
+			  <a href="#" class="btn btn-success" role="button">YES</a>
+			  <a href="#" class="btn btn-warning" role="button">NO</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Copyright © bianjie.ai. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal fade" id="alipayModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">请用支付宝扫码支付</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">支付完成</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script>
+
+<script src="js/logics.js"></script>
+</body>
+</html>

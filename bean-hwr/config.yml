@@ -1,0 +1,16 @@
+database:
+    conn_url: "postgresql+psycopg2://beanhwr:beanhwr@beanhwr-postgresql:5432/beanhwr"
+
+image:
+    save_path: "/Users/sunjh1999/img/"
+    format: ".png"
+
+system:
+    valid_count: 400
+    websocket:
+      host: 0.0.0.0
+      port: 5001
+
+crypto:
+    key: "ae87bf3t0a3#v1q@"
+    vi: "fscv400qc1dc340z"

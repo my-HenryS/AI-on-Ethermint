@@ -1,0 +1,1 @@
+docker stop bean-hwr bean-hwr-server docker_beanhwr-postgresql_1 ethermint-service tendermint-service

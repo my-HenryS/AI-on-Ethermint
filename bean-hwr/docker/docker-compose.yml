@@ -1,0 +1,23 @@
+version: '2'
+services:
+    beanhwr-postgresql:
+        image: postgres:9.6.2
+        volumes:
+           - ~/volumes/beanhwr/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=beanhwr
+            - POSTGRES_PASSWORD=beanhwr
+        ports:
+            - 5437:5432
+    web:
+      image: bean-hwr
+      container_name: bean-hwr
+      command: bash -c "python init_db.py && python ethermint-client.py"
+      ports:
+          - 5001:5001
+          - 8080:8080
+      external_links:
+          - ethermint-service
+      links:
+          - beanhwr-postgresql
+

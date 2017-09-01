@@ -1,0 +1,21 @@
+version: '2'
+services:
+    ethermint-service:
+        image:  bianjie_ethermint
+        container_name: ethermint-service
+        volumes:
+            - ~/volumes/ethermint:/ethermint
+        command: bash -c "ethermint --datadir /ethermint init /temp/setup/genesis.json && cp -r /temp/setup/keystore /ethermint && ethermint --datadir /ethermint --tendermint_addr tendermint-service:46657 --rpc --rpcaddr=0.0.0.0 --ws --wsaddr=0.0.0.0 --rpcapi eth,net,web3,personal,admin,shh"
+        ports:
+            - 8545:8545
+        links:
+            - tendermint-service
+
+    tendermint-service:
+        image: adrianbrink/tendermint
+        container_name: tendermint-service
+        volumes:
+            - ~/volumes/ethermint/tendermint:/tendermint
+        entrypoint: ""
+        command: bash -c "tendermint init --home /tendermint && tendermint --home /tendermint --proxy_app tcp://ethermint-service:46658 node"
+
