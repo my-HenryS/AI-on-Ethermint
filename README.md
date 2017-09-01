@@ -37,11 +37,13 @@ The result looks like this. You can trace the service process on the console of 
 
      cd ../bean-hwr #create client image
      docker build -f docker/Dockerfile -t bean-hwr ./
+
      ```
 
    - Run the project!
 
      ```shell
+     cd ..
      bash run.sh
      ```
 
@@ -72,4 +74,3 @@ The result looks like this. You can trace the service process on the console of 
      ```
 
    - Enjoy!
-
