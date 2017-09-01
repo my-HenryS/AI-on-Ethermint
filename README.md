@@ -6,11 +6,13 @@ The project provides a distributed hand writing recognition serivce running on E
 
 With the client node processes user's image with the first few layers of CNN, the service node then continue analyzes the processed data with the rest layers (full connnected layers).
 
+![demo_result](https://github.com/my-HenryS/AI-on-Ethermint/blob/master/bean-hwr/static/images/Model_Illustration.png)
+
 It aims at protecting data privacy since service node cannot get access to the original data while the customer cannot obtain the whole analyze model.
 
 The result looks like this. You can trace the service process on the console of right side and receive the result.
 
-![demo_result](https://github.com/my-HenryS/AI-on-Ethermint/blob/master/bean-hwr/static/demo_result.png)
+![demo_result](https://github.com/my-HenryS/AI-on-Ethermint/blob/master/bean-hwr/static/images/demo_result.png)
 
 
 
