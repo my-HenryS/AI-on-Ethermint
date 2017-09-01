@@ -18,7 +18,7 @@ The result looks like this. You can trace the service process on the console of 
 
 1. Environment
 
-   OS: Linux / Mac OS / Windows(under experiment)
+   OS: Linux / Mac OS / Windows(maybe)
 
    Docker: The entire project is wrapped in Docker containers.
 
@@ -41,7 +41,7 @@ The result looks like this. You can trace the service process on the console of 
 
    - Run the project!
 
-     ```
+     ```shell
      bash run.sh
      ```
 
@@ -55,7 +55,7 @@ The result looks like this. You can trace the service process on the console of 
 
      You can type ***"docker ps"*** and then you shall see five containers:
 
-     ```
+     ```shell
      AI on Ethermint Anonymous$ docker ps
      CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                                            NAMES
      95d5667032d3        bean-hwr                 "bash -c 'python i..."   About an hour ago   Up 2 seconds        0.0.0.0:5001->5001/tcp, 0.0.0.0:8080->8080/tcp   bean-hwr
@@ -66,3 +66,10 @@ The result looks like this. You can trace the service process on the console of 
      ```
 
    - Terminate the service
+
+     ```bash
+     bash terminate.sh
+     ```
+
+   - Enjoy!
+
