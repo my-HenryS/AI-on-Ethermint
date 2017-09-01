@@ -10,7 +10,7 @@ It aims at protecting data privacy since service node cannot get access to the o
 
 The result looks like this. You can trace the service process on the console of right side and receive the result.
 
-![QQ20170901-162914@2x](/Users/sunjh1999/Downloads/QQ20170901-162914@2x.png)
+![demo_result](https://github.com/my-HenryS/AI-on-Ethermint/blob/master/bean-hwr/static/demo_result.png)
 
 
 
@@ -18,7 +18,7 @@ The result looks like this. You can trace the service process on the console of 
 
 1. Environment
 
-   OS: Linux / Mac OS / Windows(maybe)
+   OS: Linux / Mac OS / Windows(under experiment)
 
    Docker: The entire project is wrapped in Docker containers.
 
