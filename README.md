@@ -12,7 +12,7 @@ It aims at protecting data privacy since service node cannot get access to the o
 
 The result looks like this. You can trace the service process on the console of right side and receive the result.
 
-![demo_result](https://github.com/my-HenryS/AI-on-Ethermint/blob/master/bean-hwr/static/images/demo_result.png)
+![demo_result](https://github.com/my-HenryS/AI-on-Ethermint/blob/master/bean-hwr/static/images/result_image.png)
 
 
 
