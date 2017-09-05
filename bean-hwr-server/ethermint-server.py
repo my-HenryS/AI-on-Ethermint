@@ -13,6 +13,7 @@ from config import Config
 from prpcrypt import prpcrypt
 import numpy as np
 
+mapping = {}
 
 def HexToByte( hexStr ):
     """
@@ -30,6 +31,7 @@ def test_call_service(data):
 
 
 def new_transaction_callback(transaction_hash):
+    print("received")
     dict_message = web3.eth.getTransaction(transaction_hash)
     if not dict_message['from'] == usr1:
         return
@@ -40,13 +42,18 @@ def new_transaction_callback(transaction_hash):
     result = ""
     for data in datas[1:]:
         interact_data = np.loads(HexToByte(data))
-        result += analysis(interact_data)
+        result += chr(mapping[analysis(interact_data)])
 
     msg_to_send = crypt.encrypt(img_no + "," + result)
     test_call_service(msg_to_send)
 
 
 if __name__ == "__main__":
+
+    f = open("emnist-balanced-mapping.txt")
+    for line in f.readlines():
+        key,value = line.split(" ",1)
+        mapping[int(key)] = int(value[:-1])
 
     web3 = Web3(HTTPProvider('http://ethermint-service:8545'))
     usr1 = web3.eth.accounts[0]
@@ -57,6 +64,7 @@ if __name__ == "__main__":
     new_transaction_filter = web3.eth.filter('pending')
     new_transaction_filter.watch(new_transaction_callback)
 
+    print("server ready")
     while True:
         pass
 
