@@ -12,7 +12,7 @@ services:
     web:
       image: bean-hwr
       container_name: bean-hwr
-      command: bash -c "python init_db.py && python ethermint-client.py"
+      command: bash -c "sleep 5 && python init_db.py && python ethermint-client.py"
       ports:
           - 5001:5001
           - 8080:8080
