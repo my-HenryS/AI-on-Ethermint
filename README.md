@@ -28,12 +28,12 @@ The result looks like this. You can trace the service process on the console of 
 
    - Build Docker Images
 
-     In directory named "AI on Ethermint"
+     In directory named 'AI on Ethermint'
 
      ```shell
-     AI on Ethermint Anonymous$ docker build -f ethermint/Dockerfile -t bianjie_ethermint ./ethermint
-     AI on Ethermint Anonymous$ docker build -f bean-hwr-server/docker/Dockerfile -t bean-hwr-server ./bean-hwr-server
-     AI on Ethermint Anonymous$ docker build -f bean-hwr/docker/Dockerfile -t bean-hwr ./bean-hwr
+     docker build -f ethermint/Dockerfile -t bianjie_ethermint ./ethermint
+     docker build -f bean-hwr-server/docker/Dockerfile -t bean-hwr-server ./bean-hwr-server
+     docker build -f bean-hwr/docker/Dockerfile -t bean-hwr ./bean-hwr
      ```
 
    - Run the project!
