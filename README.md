@@ -31,21 +31,14 @@ The result looks like this. You can trace the service process on the console of 
      In directory named "AI on Ethermint"
 
      ```shell
-     cd ethermint    #create ethermint image
-     docker build -f Dockerfile -t bianjie_ethermint ./
-
-     cd ../bean-hwr-server #create server image
-     docker build -f docker/Dockerfile -t bean-hwr-server ./
-
-     cd ../bean-hwr #create client image
-     docker build -f docker/Dockerfile -t bean-hwr ./
-
+     AI on Ethermint Anonymous$ docker build -f ethermint/Dockerfile -t bianjie_ethermint ./ethermint
+     AI on Ethermint Anonymous$ docker build -f bean-hwr-server/docker/Dockerfile -t bean-hwr-server ./bean-hwr-server
+     AI on Ethermint Anonymous$ docker build -f bean-hwr/docker/Dockerfile -t bean-hwr ./bean-hwr
      ```
 
    - Run the project!
 
      ```shell
-     cd ..
      bash run.sh
      ```
 
@@ -55,7 +48,7 @@ The result looks like this. You can trace the service process on the console of 
      service running on http://localhost:8080
      ```
 
-     And the service is successfully running on http://localhsot:8080
+     And the service is successfully running on http://localhost:8080
 
      You can type ***"docker ps"*** and then you shall see five containers:
 
